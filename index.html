@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Marycielo ❤️</title>
+    
+    <!-- Meta tags para redes sociales -->
+    <meta property="og:title" content="Feliz Cumpleaños Marycielo ❤️">
+    <meta property="og:description" content="Un día especial para una persona muy especial en mi vida">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon personalizado -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    
+    <!-- Google Fonts románticos -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS y Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader romántico -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-heart">
+            <div class="heart-beat">❤️</div>
+            <p>Cargando momentos especiales...</p>
+        </div>
+    </div>
+
+    <!-- Toggle modo noche/día -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <!-- Contador de días juntos -->
+    <div class="days-counter" id="daysCounter">
+        <div class="counter-content">
+            <span class="counter-number" id="daysNumber">0</span>
+            <span class="counter-text">días juntos ❤️</span>
+        </div>
+    </div>
+
+    <div class="floating-hearts" id="floating-hearts"></div>
+    
+    <button class="music-control" id="musicControl">
+        <i class="fas fa-play" id="musicIcon"></i>
+    </button>
+    
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="Prueba - P3-f.mp3" type="audio/mpeg">
+        Su navegador no soporta el elemento de audio.
+    </audio>
+
+    <div class="container">
+        <header class="header parallax-bg" data-aos="fade-down">
+            <h1>Feliz Cumpleaños Marycielo ❤️</h1>
+            <p>Un día especial para una persona muy especial en mi vida</p>
+        </header>
+
+        <section class="section parallax-section" data-aos="fade-right">
+            <h2><i class="fas fa-heart"></i> Nuestro Inicio</h2>
+            <div class="image-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-slide active">
+                        <div class="image-placeholder adaptive-placeholder">
+                            📸 Aquí puedes agregar una foto de cuando se conocieron
+                            <img src="foto_1.jpg" alt="" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="image-placeholder adaptive-placeholder">
+                            
+                            <img src="foto_1.jpg" alt="" loading="lazy">
+                        </div>
+                    </div>
+                                        <div class="gallery-slide">
+                        <div class="image-placeholder adaptive-placeholder">
+                            
+                            <img src="images.jpg" alt="" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-navigation">
+                        <button class="gallery-btn prev-btn">‹</button>
+                        <button class="gallery-btn next-btn">›</button>
+                    </div>
+                </div>
+            </div>
+            <p>Todo comenzó de la manera más hermosa e inesperada. Desde el momento en que nuestros caminos se cruzaron, supe que algo especial estaba comenzando. Cada conversación, cada sonrisa, cada momento compartido fue construyendo algo único y maravilloso entre nosotros.</p>
+            <p>No importa cuánto tiempo pase, siempre recordaré ese primer momento cuando me di cuenta de que habías llegado para cambiar mi mundo de la manera más dulce.</p>
+        </section>
+
+        <section class="section parallax-section" data-aos="fade-left">
+            <h2><i class="fas fa-star"></i> Momentos Inolvidables</h2>
+            <div class="image-gallery">
+                <div class="gallery-container">
+                    <div class="gallery-slide active">
+                        <div class="adaptive-placeholder">
+                            📸 Espacio para fotos de sus momentos especiales juntos
+                            <img src="foto_1 - copia.jpg" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Hemos creado tantos recuerdos hermosos juntos. Cada aventura, cada risa compartida, cada momento de complicidad se ha convertido en un tesoro en mi corazón.</p>
+            <p>Desde nuestras conversaciones hasta altas horas, nuestros paseos, nuestras locuras y travesuras, hasta los momentos más tranquilos donde simplemente disfrutamos de nuestra compañía. Cada recuerdo contigo es una pequeña obra de arte.</p>
+        </section>
+
+        <!-- Mini juego: Encuentra los corazones -->
+        <section class="section game-section" data-aos="zoom-in">
+            <h2><i class="fas fa-gamepad"></i> ¡Encuentra los Corazones!</h2>
+            <p>¡Haz clic en los corazones que aparecen para conseguir puntos! ❤️</p>
+            <div class="game-container" id="gameContainer">
+                <div class="game-score">Puntos: <span id="gameScore">0</span></div>
+                <div class="game-area" id="gameArea">
+                    <button class="start-game-btn" id="startGameBtn">¡Comenzar Juego!</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section parallax-section" data-aos="fade-right">
+            <h2><i class="fas fa-heart-eyes"></i> Razones Por Las Que Te Amo</h2>
+            <div class="adaptive-placeholder">
+                📸 Una foto hermosa de Marycielo
+                <img src="foto_1 - copia (2).jpg" alt="Marycielo" loading="lazy">
+            </div>
+            <ul class="love-reasons">
+                <li data-aos="fade-up" data-aos-delay="100">Tu sonrisa ilumina mis días más grises</li>
+                <li data-aos="fade-up" data-aos-delay="200">Tu manera única de ver la vida me inspira</li>
+                <li data-aos="fade-up" data-aos-delay="300">Tu risa es la melodía más hermosa que conozco</li>
+                <li data-aos="fade-up" data-aos-delay="400">Tu bondad y tu corazón noble me conquistan cada día</li>
+                <li data-aos="fade-up" data-aos-delay="500">Tu fortaleza me enseña a ser mejor persona</li>
+                <li data-aos="fade-up" data-aos-delay="600">Tu manera de amar hace que me sienta el más afortunado</li>
+                <li data-aos="fade-up" data-aos-delay="700">Tu presencia convierte lo ordinario en extraordinario</li>
+                <li data-aos="fade-up" data-aos-delay="800">Tu inteligencia y tu humor me fascinan</li>
+            </ul>
+        </section>
+
+        <!-- Mensaje sorpresa con contraseña -->
+        <section class="section secret-section" data-aos="fade-up">
+            <h2><i class="fas fa-lock"></i> Mensaje Secreto</h2>
+            <p>Hay un mensaje especial esperándote... ¿Cuál es nuestra canción favorita? 🎵</p>
+            <div class="password-container">
+                <input type="text" id="secretPassword" placeholder="Escribe la respuesta aquí..." class="password-input">
+                <button id="unlockBtn" class="unlock-btn">Desbloquear ❤️</button>
+            </div>
+            <div id="secretMessage" class="secret-message hidden">
+                <h3>¡Mensaje Desbloqueado! 🎉</h3>
+                <p>Cada vez que escucho nuestra canción, mi corazón se llena de todos los momentos hermosos que hemos vivido juntos. Eres mi melodía favorita, mi ritmo perfecto, y la canción que quiero escuchar por el resto de mi vida. ❤️</p>
+            </div>
+        </section>
+
+        <section class="section carta parallax-section" data-aos="fade-up">
+            <h2><i class="fas fa-envelope-heart"></i> Una Carta Para Ti</h2>
+            <div class="adaptive-placeholder">
+                📸 Una foto especial de ustedes dos
+                <img src="foto_1 - copia (3).jpg" alt="Marycielo y yo" loading="lazy">
+            </div>
+            <p>Mi querida Marycielo,</p>
+            <p>En este día tan especial para ti, quiero que sepas lo importante que eres en mi vida. No es solo tu cumpleaños lo que celebramos hoy, sino la hermosa persona que eres y todo lo que aportas al mundo.</p>
+            <p>Cada día contigo es un regalo. Tu manera de ser, tu corazón generoso, tu espíritu libre y tu amor sincero hacen que cada momento sea único. Me siento increíblemente afortunado de tenerte en mi vida.</p>
+            <p>Deseo que este nuevo año de vida esté lleno de sueños cumplidos, aventuras increíbles, risas interminables y mucho amor. Quiero estar ahí para celebrar cada logro, apoyarte en cada desafío y crear miles de recuerdos más juntos.</p>
+            <p>Feliz cumpleaños, mi amor. Que sepas que eres amada, valorada y celebrada no solo hoy, sino cada día.</p>
+            <p>Con todo mi amor,<br>Tu persona especial ❤️</p>
+        </section>
+
+        <section class="section final-section parallax-section" data-aos="zoom-in">
+            <h2><i class="fas fa-infinity"></i> Y esto solo es el comienzo...</h2>
+            <div class="birthday-cake">🎂</div>
+            <p>Este es solo el inicio de muchas aventuras más, de muchos cumpleaños que celebraremos juntos, de muchas sonrisas que compartiremos y de mucho amor que seguiremos construyendo día a día.</p>
+            <p>¡Que viva Marycielo! ¡Que viva el amor! ¡Y que vengan muchos años más de felicidad juntos!</p>
+            <div class="final-celebration">
+                🎉 ¡FELIZ CUMPLEAÑOS! 🎉
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
