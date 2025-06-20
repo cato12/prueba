@@ -4,7 +4,7 @@ let isDarkMode = false;
 let gameScore = 0;
 let gameActive = false;
 let gameHearts = [];
-let startDate = new Date('2025-06-01'); // Cambiar por su fecha real
+//let startDate = new Date('2025-06-01'); // Cambiar por su fecha real
 
 // Preloader romántico
 window.addEventListener('load', () => {
@@ -254,19 +254,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
-
-
-
-
-
-
 // Control de música mejorado
 const music = document.getElementById('backgroundMusic');
 const musicControl = document.getElementById('musicControl');
 const musicIcon = document.getElementById('musicIcon');
+
+const music2       = document.getElementById('backgroundMusic2');
+const musicControl2 = document.getElementById('musicControl2');
+const musicIcon2   = document.getElementById('musicIcon2');
+let isPlaying2     = false;
+
 
 // Configuración de audio mejorada
 if (music) {
@@ -312,6 +309,33 @@ if (music) {
             musicControl.classList.remove('pulse');
         });
     }
+}
+
+
+// Control del segundo botón
+if (music2) {
+    music2.volume = 0.3;
+    music2.preload = 'auto';
+}
+
+if (musicControl2) {
+    musicControl2.addEventListener('click', () => {
+        if (isPlaying2) {
+            fadeOutAudio(music2, 500, () => {
+                music2.pause();
+                if (musicIcon2) musicIcon2.className = 'fas fa-play';
+            });
+        } else {
+            music2.play().then(() => {
+                fadeInAudio(music2, 0.3, 500);
+                if (musicIcon2) musicIcon2.className = 'fas fa-pause';
+            }).catch(error => {
+                console.log('Error al reproducir segundo audio:', error);
+            });
+        }
+        isPlaying2 = !isPlaying2;
+        musicControl2.classList.remove('pulse');
+    });
 }
 
 // Funciones de fade para audio
@@ -479,13 +503,15 @@ function createGameHeart() {
     const gameIcons = [
         { icon: '💖', points: 15, type: 'good' },
         { icon: '❤️', points: 10, type: 'good' },
-        { icon: '💕', points: 12, type: 'good' },
+        { icon: '🎉', points: 12, type: 'good' },
+        { icon: '🫶', points: 12, type: 'good' },
+        { icon: '🍻', points: 12, type: 'good' },
+        { icon: '🎂', points: 12, type: 'good' },
         { icon: '🖤', points: -5, type: 'bad' },
         { icon: '💔', points: -8, type: 'bad' },
-        { icon: '🗲', points: -10, type: 'bad' },
         { icon: '💀', points: -15, type: 'bad' },
         { icon: '😒', points: -20, type: 'bad' },
-        { icon: '😂', points: -15, type: 'bad' },
+        { icon: '😔', points: -15, type: 'bad' },
         { icon: '🤷‍♂️', points: -10, type: 'bad' }
     ];
     
@@ -592,7 +618,7 @@ function endGame() {
     }
     
     if (gameScore > 100) {
-        createCelebrationMessage('¡Increíble! ¡Eres muy rápido! 🎉');
+        createCelebrationMessage('¡Increíble! ¡Eres muy rápida! 🎉');
     } else if (gameScore > 50) {
         createCelebrationMessage('¡Muy bien! ¡Buen trabajo! 👏');
     } else {
@@ -648,8 +674,7 @@ function checkPassword() {
     if (!secretPassword) return;
     
     const password = secretPassword.value.toLowerCase().trim();
-    const correctPasswords = ['perfect', 'historia de un sueño', 'love', 'amor'];
-    
+    const correctPasswords = ['cerveza', 'playa', 'vino', 'salsa', 'viajar', 'viajes', 'cielo'];  
     if (correctPasswords.includes(password)) {
         if (secretMessage) secretMessage.classList.remove('hidden');
         secretPassword.disabled = true;
